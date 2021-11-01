@@ -17,12 +17,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 // INCLUDE HERE THE LINK TO THE GIT REPOSITORY AS A COMMENT!!!!
-
+//https://github.com/LucasMatteis/RentACar
 
 // INCLUDE HERE THE FULL NAME AND STUDENT NUMBER OF BOTH TEAM MEMBERS 
 // AS A COMMENT!!!!
-
-
+// Lucas Matteis - 2020495
+// Lais Santos - 2020311
 
 /**
  *
