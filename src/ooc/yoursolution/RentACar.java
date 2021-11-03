@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ooc.yoursolution;
 import java.util.List;
 import ooc.enums.*;
@@ -11,10 +7,10 @@ import ooc.enums.*;
 
 public class RentACar implements RentACarInterface {
 
-    private List<Car> cars;
+    private List<Car> cars; //list of cars
     private String name;
 
-    public RentACar(List<Car> cars, String name) {
+    public RentACar(List<Car> cars, String name) { //constructor
         this.cars = cars;
         this.name = name;
     }
@@ -40,7 +36,7 @@ public class RentACar implements RentACarInterface {
     }
 
     @Override
-    public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
+    public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) { //loop for checking availability
         int currentDay, flag;
 
         for (Car car : cars) {
@@ -64,7 +60,7 @@ public class RentACar implements RentACarInterface {
     }
 
     @Override
-    public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
+    public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) { //loop for getting availablity
         int currentDay, flag;
 
         for (Car car : cars) {
