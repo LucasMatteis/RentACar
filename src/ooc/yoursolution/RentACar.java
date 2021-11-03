@@ -15,6 +15,32 @@ import ooc.enums.Month;
  */
 public class RentACar implements RentACarInterface{
 
+    private String name;
+    private List<CarInterface> carList;
+
+    public RentACar(String name, List<CarInterface> carList) {
+        this.name = name;
+        this.carList = carList;
+    }
+
+    public List<CarInterface> getCarList() {
+        return carList;
+    }
+
+    public void setCarList(List<CarInterface> carList) {
+        this.carList = carList;
+    }
+    
+    @Override
+    public String getName() {
+        return this.name;
+    }
+    
+   @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     @Override
     public List<CarInterface> getCars() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -25,15 +51,6 @@ public class RentACar implements RentACarInterface{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
@@ -52,7 +69,7 @@ public class RentACar implements RentACarInterface{
 
     @Override
     public int getNumberOfCars() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return carList.size();
     }
     
 }

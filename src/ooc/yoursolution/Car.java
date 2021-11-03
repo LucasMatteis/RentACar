@@ -15,6 +15,34 @@ import ooc.enums.Month;
  */
 public class Car implements CarInterface{
 
+    private Make make;
+    private double price;
+    private int carId;
+
+    public Car(Make make, double price, int carId) {
+        this.make = make;
+        this.price = price;
+        this.carId = carId;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getCarId() {
+        return carId;
+    }
+
+    public void setCarId(int carId) {
+        this.carId = carId;
+    }
+    
+    
+            
     @Override
     public Map<Month, boolean[]> createAvailability() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
